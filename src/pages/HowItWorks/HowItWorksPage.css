@@ -1,0 +1,364 @@
+/* ===== How It Works — 1:1 single-viewport clone of how-it-works.png ===== */
+.hiw {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  padding: 0;
+}
+
+/* ---------------- Left column ---------------- */
+.hiw-left {
+  position: absolute;
+  z-index: 4;
+  left: 6.6%;
+  top: clamp(8px, 6%, 46px);
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hiw-note {
+  position: relative;
+  margin-left: 4%;
+  transform: rotate(-3.5deg);
+  transform-origin: left center;
+}
+
+.hiw-note-heart {
+  position: absolute;
+  left: -12%;
+  bottom: calc(clamp(14px, 3vh, 24px) * -1);
+  width: clamp(14px, 3vh, 24px);
+  height: auto;
+}
+
+.hiw-note-text {
+  margin: 0;
+  font-family: var(--hb-font-hand);
+  font-size: clamp(19px, 4.2vh, 32px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--hb-ink);
+}
+
+.hiw-note-indent {
+  display: inline-block;
+  padding-left: 4.2vw;
+}
+
+.hiw-headline-wrap {
+  position: relative;
+  margin-top: clamp(8px, 2.5vh, 26px);
+}
+
+.hiw-burst {
+  position: absolute;
+  left: calc(clamp(28px, 5vh, 48px) * -1);
+  top: clamp(4px, 1vh, 10px);
+  width: clamp(22px, 5.5vh, 38px);
+  height: auto;
+}
+
+.hiw-headline {
+  margin: 0;
+  font-family: var(--hb-font-body);
+  font-weight: 900;
+  font-size: clamp(30px, min(5.7vw, 11vh), 82px);
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  color: var(--hb-ink);
+  white-space: nowrap;
+}
+
+.hiw-headline-accent {
+  color: var(--hb-orange);
+}
+
+.hiw-sub {
+  margin: clamp(6px, 1.6vh, 14px) 0 0;
+  font-size: clamp(11px, 2.5vh, 16px);
+  line-height: 1.45;
+  color: var(--hb-muted);
+  font-weight: 700;
+}
+
+/* ---------------- Cards row ---------------- */
+.hiw-cards {
+  position: absolute;
+  z-index: 3;
+  top: 33%;
+  left: 37%;
+  right: 3%;
+  height: 58%;
+  display: flex;
+  gap: 1.8%;
+}
+
+.hiw-card-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+.hiw-card-wrap:nth-child(1) { transform: rotate(-1.4deg); }
+.hiw-card-wrap:nth-child(2) { transform: rotate(0.8deg); }
+.hiw-card-wrap:nth-child(3) { transform: rotate(-1deg); }
+
+.hiw-card {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+.hiw-card--peach {
+  background: #fceee2;
+  border-radius: 50% 50% 34% 34% / 18% 18% 12% 12%;
+}
+.hiw-card--sage {
+  background: #f0f2e3;
+  border-radius: 50% 50% 36% 36% / 17% 17% 13% 13%;
+}
+.hiw-card--amber {
+  background: #fdf3d9;
+  border-radius: 50% 50% 35% 35% / 18% 18% 11% 11%;
+}
+
+.hiw-badge {
+  position: absolute;
+  top: calc(clamp(0px, 0.4vh, 5px) * -1);
+  transform: translateX(-50%);
+  width: clamp(34px, 8.9vh, 50px);
+  height: clamp(34px, 8.9vh, 50px);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--hb-font-body);
+  font-weight: 900;
+  font-size: clamp(13px, 3.8vh, 20px);
+  letter-spacing: 0.01em;
+  z-index: 2;
+}
+.hiw-card-wrap:nth-child(1) .hiw-badge { left: 35%; }
+.hiw-card-wrap:nth-child(2) .hiw-badge { left: 48%; }
+.hiw-card-wrap:nth-child(3) .hiw-badge { left: 48%; }
+
+.hiw-badge--peach { background: #fbc9a8; color: #e2541f; }
+.hiw-badge--sage { background: #d7dcbc; color: var(--hb-ink); }
+.hiw-badge--amber { background: #fad78f; color: #e2541f; }
+
+.hiw-card-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 clamp(8px, 1vw, 18px) clamp(16px, 7vh, 44px);
+}
+
+.hiw-icon-disc {
+  width: clamp(60px, 15vh, 92px);
+  height: clamp(44px, 11vh, 72px);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  margin-top: 7vh;
+}
+.hiw-card--peach .hiw-icon-disc { background: #f9e3d4; }
+.hiw-card--sage .hiw-icon-disc { background: #e6e9d4; }
+.hiw-card--amber .hiw-icon-disc { background: #f9ebc3; }
+
+.hiw-icon {
+  width: 58%;
+  height: 72%;
+}
+
+.hiw-card-title {
+  margin: clamp(10px, 4.6vh, 30px) 0 0;
+  font-family: var(--hb-font-body);
+  font-weight: 900;
+  font-size: clamp(13px, 3.7vh, 20px);
+  letter-spacing: -0.01em;
+  color: var(--hb-ink);
+  white-space: nowrap;
+}
+
+.hiw-card-desc {
+  margin: clamp(6px, 2.4vh, 16px) 0 0;
+  font-size: clamp(9.5px, 2.4vh, 14px);
+  line-height: 1.45;
+  color: var(--hb-muted);
+  font-weight: 600;
+  max-width: 19ch;
+}
+
+.hiw-arrow {
+  position: absolute;
+  z-index: 10;
+  top: 31%;
+  width: clamp(18px, 5.8vh, 32px);
+  height: auto;
+}
+.hiw-arrow--1 { left: 32.9%; transform: translateX(-50%); }
+.hiw-arrow--2 { left: 66.5%; transform: translateX(-50%); }
+
+/* ---------------- Top-right doodles ---------------- */
+.hiw-doodle-paw {
+  position: absolute;
+  z-index: 2;
+  top: 9%;
+  right: 20%;
+  width: clamp(30px, 8vh, 46px);
+  height: auto;
+  transform: rotate(14deg);
+}
+
+.hiw-doodle-swirl {
+  position: absolute;
+  z-index: 2;
+  top: 7%;
+  right: 1.6%;
+  width: clamp(90px, 25vh, 140px);
+  height: auto;
+}
+
+.hiw-doodle-heart-tr {
+  position: absolute;
+  z-index: 2;
+  top: 6%;
+  right: 4%;
+  width: clamp(22px, 6.2vh, 36px);
+  height: auto;
+}
+
+/* ---------------- Dog ---------------- */
+.hiw-dog-zone {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  width: 38%;
+  height: 42%;
+  pointer-events: none;
+}
+
+.hiw-dog {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+  z-index: 1;
+}
+
+.hiw-dog-heart {
+  position: absolute;
+  z-index: 2;
+  top: 30%;
+  left: 13%;
+  width: clamp(16px, 5.8vh, 30px);
+  height: auto;
+  transform: rotate(-8deg);
+}
+
+.hiw-dog-ticks {
+  position: absolute;
+  z-index: 2;
+  top: 8%;
+  left: 17%;
+  width: clamp(20px, 7.3vh, 40px);
+  height: auto;
+}
+
+.hiw-dog-ticks--right {
+  left: 83%;
+  top: 28%;
+  transform: scaleX(-1);
+}
+
+/* ---------------- Hills + house ---------------- */
+.hiw-hills {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: clamp(30px, 6vh, 60px);
+}
+
+.hiw-hill-back { fill: #eef1dc; }
+.hiw-hill-front { fill: #e2e7cc; }
+
+.hiw-house {
+  position: absolute;
+  z-index: 2;
+  right: clamp(12px, 2vw, 45px);
+  bottom: clamp(4px, 2vh, 18px);
+  width: clamp(85px, 27vh, 150px);
+  height: auto;
+}
+
+.hiw-grass {
+  position: absolute;
+  z-index: 2;
+  height: auto;
+}
+.hiw-grass--1 {
+  right: 27%;
+  bottom: clamp(10px, 4vh, 34px);
+  width: clamp(24px, 6.5vh, 42px);
+  transform: scaleX(-1);
+}
+.hiw-grass--2 {
+  right: 42%;
+  bottom: clamp(8px, 3.4vh, 28px);
+  width: clamp(22px, 6vh, 38px);
+}
+
+/* ---------------- Responsive fallback ---------------- */
+@media (max-width: 900px) {
+  .hiw {
+    position: static;
+    overflow: visible;
+    padding: 0 20px 40px;
+  }
+  .hiw-left,
+  .hiw-cards,
+  .hiw-dog-zone,
+  .hiw-hills,
+  .hiw-house,
+  .hiw-grass,
+  .hiw-doodle-paw,
+  .hiw-doodle-swirl,
+  .hiw-doodle-heart-tr {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+  }
+  .hiw-left { margin-top: 24px; }
+  .hiw-headline { white-space: normal; }
+  .hiw-cards {
+    flex-direction: column;
+    gap: 40px;
+    margin: 48px 0 24px;
+    height: auto;
+  }
+  .hiw-card { padding: 56px 24px 32px; border-radius: 36px; }
+  .hiw-card-wrap { transform: none; }
+  .hiw-icon-disc { margin-top: 0; }
+  .hiw-arrow { display: none; }
+  .hiw-dog-zone { position: relative; height: 220px; }
+  .hiw-dog { position: absolute; }
+  .hiw-doodle-paw,
+  .hiw-doodle-swirl,
+  .hiw-doodle-heart-tr,
+  .hiw-grass { display: none; }
+  .hiw-hills { position: relative; height: 80px; margin-top: -40px; }
+}
