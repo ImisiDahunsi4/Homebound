@@ -1,0 +1,36 @@
+.coming {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  min-height: 46vh;
+  justify-content: center;
+}
+
+.coming-paw {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.coming-title {
+  font-family: var(--hb-font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
+  margin: 0;
+}
+
+.coming-body {
+  margin: 0;
+  color: var(--hb-muted);
+  font-size: 17px;
+}
+
+.coming-body code {
+  background: var(--hb-page);
+  border: 1px solid var(--hb-border);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 15px;
+}

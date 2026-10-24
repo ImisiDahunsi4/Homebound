@@ -1,0 +1,31 @@
+/* HomeBound design tokens — proposed values from 02-design-system.md.
+   Tune for WCAG AA contrast (4.5:1 normal text, 3:1 large). */
+:root {
+  --hb-ink: #102820;
+  --hb-muted: #50635b;
+  --hb-canvas: #fffbf3;
+  --hb-page: #f5f2e8;
+  --hb-sage: #dde7d3;
+  --hb-pine: #234c30;
+  --hb-orange: #f14a27;
+  --hb-orange-soft: #fbe0d3;
+  --hb-found: #2f6a48;
+  --hb-lost: #cf4b2b;
+  --hb-warning: #946016;
+  --hb-border: #e9e6db;
+  --hb-white: #ffffff;
+  --hb-backdrop: #93a786;
+
+  --hb-radius-frame: 32px;
+  --hb-radius-card: 20px;
+  --hb-radius-control: 12px;
+  --hb-radius-pill: 999px;
+  --hb-shadow: 0 14px 34px rgba(30, 40, 29, 0.07);
+  --hb-shadow-lg: 0 24px 60px rgba(30, 40, 29, 0.12);
+  --hb-max-width: 1720px;
+  --hb-focus: #145dc8;
+
+  --hb-font-display: "Fraunces", Georgia, serif;
+  --hb-font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
+  --hb-font-hand: "Caveat", cursive;
+}
